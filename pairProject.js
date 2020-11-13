@@ -1,6 +1,6 @@
 $( document ).ready(function() {
     
-         $("[id^=s]").hide()
+        $("[id^=s]").hide()
 
 
         $("[id^=t]").click(function(){
