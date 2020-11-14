@@ -11,10 +11,11 @@ body {
 .pagination a {
     color: rgb(65, 63, 63);
     text-decoration: none;
-    transition: background-color .3s;
+    transition: background-color .0s;
     margin-left: auto;
     margin-right: auto;
     width:600px;
+    
 
    
   }
