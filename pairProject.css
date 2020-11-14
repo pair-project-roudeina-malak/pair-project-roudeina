@@ -1,11 +1,8 @@
 body {
-    /* background-color:
-     azure; */
-     /* background:url("https://cdn.wallpapersafari.com/22/9/oCnd7i.jpg") left repeat-y,url("https://cdn.wallpapersafari.com/22/9/oCnd7i.jpg") right repeat-y; */
-    background-color:  azure; 
-    background-size: auto ; 
-    margin: 0%;
     
+    background-color: #D2D0B9; 
+    background-size: auto ; 
+    justify-content: center;
     background-repeat: no-repeat;
     background-attachment: fixed;
     background-position: center;
@@ -13,16 +10,12 @@ body {
 
 .pagination a {
     color: rgb(65, 63, 63);
-    /* float: left;
-    padding: 4px 8px; */
     text-decoration: none;
     transition: background-color .3s;
     margin-left: auto;
     margin-right: auto;
     width:600px;
-    /* float: right;
-   top:0;
-   right:0; */
+
    
   }
 
@@ -35,7 +28,6 @@ h2{
     margin-left: auto;
     margin-right: auto;
     width: 50%;
-    /* background-color: #6B63B5; */
     background-color: rgb(82, 81, 81);
     opacity: 0.8;
     text-align: center;
@@ -44,22 +36,18 @@ h2{
 
     
 }
-h2:hover{
-    opacity: 0.9;
+/* h2:hover{
+    opacity: 0.85;
     font-size: xx-large;
 
-}
+} */
 p {
     font-family: "Xanh Mono" ;
     color: black;
     font-size: medium;
-    /* margin-left: 0;
-    margin-right: auto; */
-    /* width: 50%; */
-   
     letter-spacing: 2px;
     text-shadow: 1px 1px 2px rgb(165, 112, 112);
-    /* text-align: center; */
+    text-align: center;
     margin-left: auto;
     margin-right: auto;
     width:600px
@@ -78,7 +66,7 @@ p {
     font-family: "Xanh Mono" ;
     color: black;
     font-size: 40px;
-    display: block;
+    display: inline-block;
     position: absolute center;
     margin-left: 400px;
     margin-right: auto;
@@ -90,11 +78,19 @@ p {
     font-family: "Xanh Mono" ;
     color:  rgba(40, 40, 41, 0.658);
     font-weight: bold;
-    font-size: 70px;
+    font-size: 90px;
     /* display: block; */
     /* position: absolute center; */
     margin-left: auto;
     margin-right: auto;
-    width:600px;
+    width:100%;
     text-align: center;
+  }
+  #logo{
+    background-color: transparent;
+    width: 50%;
+    height: 30%;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
   }
