@@ -77,22 +77,50 @@ $( document ).ready(function() {
            $( ".answer3" ).css('background-color','  #D2D0B9');
            $( ".answer4" ).css('background-color','  #D2D0B9'); 
            
+        
           if(i < question.length){
               showqst(i);
               $("#question").append("<img src="+img[i]+`  class = 'image' id=image${i}>`)    
               i++;    
           }else{scores(score)}
-          
-              
+          $(".answer1" ).css('color','black');
+          $(".answer2" ).css('color','black');
+          $(".answer3" ).css('color','black');
+          $(".answer4" ).css('color','black');
+
+          $(".answer1 ").prop("disabled", false);;
+          $(".answer2 ").prop("disabled", false);
+          $(".answer3 ").prop("disabled", false);
+          $(".answer4 ").prop("disabled", false);
+
+         
           })
-          $(".answer1").click(function(){ score.gryff++; });
-          $(".answer2").click(function(){ score.huffle++; });
-          $(".answer3").click(function(){ score.raven++; });
-          $(".answer4").click(function(){ score.sly++; }); 
-          $(".answer1").click(function(){ $( ".answer1" ).css('background-color',' rgb(172, 142, 86)'); });
-          $(".answer2").click(function(){ $( ".answer2" ).css('background-color',' rgb(172, 142, 86)'); });
-          $(".answer3").click(function(){ $( ".answer3" ).css('background-color',' rgb(172, 142, 86)'); });
-          $(".answer4").click(function(){ $( ".answer4" ).css('background-color',' rgb(172, 142, 86)'); });
+          $(".answer1").click(function(){ 
+            $(".answer1" ).css('color',' rgb(172, 142, 86)');
+            score.gryff++; 
+            $(".answer2 ").prop("disabled", true);
+            $(".answer3 ").prop("disabled", true);
+            $(".answer4 ").prop("disabled", true);
+         });
+          $(".answer2").click(function(){ 
+            $(".answer2" ).css('color',' rgb(172, 142, 86)');
+            $(".answer1 ").prop("disabled", true); 
+            $(".answer3 ").prop("disabled", true);
+            $(".answer4 ").prop("disabled", true);
+            score.huffle++; 
+         });
+          $(".answer3").click(function(){ 
+            $(".answer3" ).css('color',' rgb(172, 142, 86)'); 
+            $(".answer2 ").prop("disabled", true);
+            $(".answer1 ").prop("disabled", true);
+            $(".answer4 ").prop("disabled", true);
+            score.raven++; });
+          $(".answer4").click(function(){ 
+            $(".answer4" ).css('color',' rgb(172, 142, 86)');
+            $(".answer2 ").prop("disabled", true);
+            $(".answer3 ").prop("disabled", true);
+            $(".answer1 ").prop("disabled", true);
+            score.sly++; }); 
             
 function showqst(i){
   $("#question").text(question[i].qst)
@@ -122,6 +150,8 @@ if (result==="gryff"){
    $("#score").append("<iframe width='560' height='315' src='https://www.youtube.com/embed/O9XVYs-aSW0?autoplay=1' frameborder='0' allow='accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture' allowfullscreen></iframe>")
   }else if(result==="sly"){
    $("#score").append("<iframe width='560' height='315' src='https://www.youtube.com/embed/ozC4uWuJ-d0?autoplay=1' frameborder='0' allow='accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture'allowfullscreen></iframe>")
+  }else if(result===""){
+   $("#score").append("<p id ='error'>Why you didnt fill the choices??</p>");
   }
 } 
 });
