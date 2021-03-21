@@ -1,5 +1,4 @@
-body {
-    
+body {  
     background-color: #D2D0B9; 
     background-size: auto ; 
     justify-content: center;
@@ -15,9 +14,6 @@ body {
     margin-left: auto;
     margin-right: auto;
     width:600px;
-    
-
-   
   }
 
 h2{
